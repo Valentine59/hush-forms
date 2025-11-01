@@ -1,0 +1,1 @@
+﻿Commit 2: fix(contract): tighten survey permission checks by Valentine59 at 2025-11-01T09:52:00-07:00

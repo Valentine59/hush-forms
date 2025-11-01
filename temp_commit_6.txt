@@ -1,0 +1,1 @@
+﻿Commit 7: perf(frontend): defer chart hydration by Bradley747 at 2025-11-01T15:38:00-07:00

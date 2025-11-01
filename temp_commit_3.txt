@@ -1,0 +1,1 @@
+﻿Commit 4: refactor(contract): extract tally helpers by Valentine59 at 2025-11-01T11:07:00-07:00

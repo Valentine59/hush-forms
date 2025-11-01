@@ -1,0 +1,1 @@
+﻿Commit 8: chore(config): align hardhat version by Valentine59 at 2025-11-03T09:18:00-08:00

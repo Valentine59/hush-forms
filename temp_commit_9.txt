@@ -1,0 +1,1 @@
+﻿Commit 10: fix(contract): guard zero participants by Valentine59 at 2025-11-03T11:28:00-08:00
