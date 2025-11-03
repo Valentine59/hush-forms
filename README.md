@@ -1,4 +1,4 @@
-﻿# Encrypted Survey dApp (FHEVM)
+# Encrypted Survey dApp (FHEVM)
 
 Privacy-preserving three-question numeric survey built on the Zama FHEVM. Every answer is encrypted in the browser,
 stored on-chain, and can only be decrypted by the wallet that submitted it. The repository ships with a production-ready
@@ -6,7 +6,7 @@ Next.js frontend, Hardhat tooling, and Sepolia deployment scripts aligned with t
 
 ## Demo
 
-- **Walkthrough video:** [`media/demo.mp4`](./media/demo.mp4) 鈥?showcases wallet connection, encrypted submissions,
+- **Walkthrough video:** [`media/demo.mp4`](./media/demo.mp4) �?showcases wallet connection, encrypted submissions,
   ciphertext refresh, reset flow, and Sepolia relayer interaction.
 
 ## Highlights
@@ -17,7 +17,7 @@ Next.js frontend, Hardhat tooling, and Sepolia deployment scripts aligned with t
      `frontend/hooks/useEncryptedSurvey.tsx`).
   2. Contract ingests ciphertext through `FHE.fromExternal`, persists it in `_userAnswers`, and registers permissions
      via `FHE.allowThis` + `FHE.allow` so the caller and contract can decrypt when needed.
-  3. Decryption leverages Zama鈥檚 relayer SDK; the UI collects a user signature, forwards it to the relayer, and
+  3. Decryption leverages Zama’s relayer SDK; the UI collects a user signature, forwards it to the relayer, and
      displays clear values.
 - **Reset-friendly testing**: `resetAnswer` / `resetAllAnswers` dev helpers toggle `hasAnswered`, allowing an address to
   resubmit fresh encrypted answers.
@@ -64,10 +64,10 @@ flowchart LR
 Located in `frontend/hooks/useEncryptedSurvey.tsx`:
 
 1. `instance.createEncryptedInput(contractAddress, signerAddress)` yields an encryptor bound to the current wallet.
-2. `input.add32(value)` queues the numeric answer (`0鈥?^32-1`).
+2. `input.add32(value)` queues the numeric answer (`0�?^32-1`).
 3. `input.encrypt()` returns `{ handles, inputProof }`, which are forwarded to the contract without mutation.
 4. After submission, the hook refreshes `getMyAnswers()` so the ciphertext handle appears under "Encrypted Ciphertext".
-5. `decryptTallies()` orchestrates the relayer flow: request signature 鈫?call relayer 鈫?display decrypted values.
+5. `decryptTallies()` orchestrates the relayer flow: request signature �?call relayer �?display decrypted values.
 
 **Resetting your own account (Sepolia example)**
 
@@ -139,7 +139,7 @@ The app auto-detects localhost vs production. Production domains force Sepolia a
 
 ### Deployment Notes
 
-- **Demo asset**: `media/demo.mp4` is committed for documentation. If the file exceeds GitHub鈥檚 100 MB limit, consider
+- **Demo asset**: `media/demo.mp4` is committed for documentation. If the file exceeds GitHub’s 100 MB limit, consider
   Git LFS.
 - **Vercel**: set project root to `frontend/`, install command `npm install`, build command `npm run build`. Ensure env
   vars mirror the Hardhat configuration.
@@ -148,8 +148,8 @@ The app auto-detects localhost vs production. Production domains force Sepolia a
 
 ## Tests
 
-- `test/EncryptedSurvey.ts` 鈥?local mock FHEVM coverage.
-- `test/EncryptedSurveySepolia.ts` 鈥?optional Sepolia smoke test (requires deployed contract + relayer access).
+- `test/EncryptedSurvey.ts` �?local mock FHEVM coverage.
+- `test/EncryptedSurveySepolia.ts` �?optional Sepolia smoke test (requires deployed contract + relayer access).
 
 ## References
 
@@ -260,3 +260,5 @@ Built with on Zama FHEVM. All UI copy is enforced in English per the most recent
 <!-- Commit 49 by Bradley747 at 2025-11-06 11:16:00 -->
 
 <!-- Commit 50 by Valentine59 at 2025-11-06 11:53:00 -->
+
+<!-- Auto-generated comment for collaboration - 2025-11-08 16:39:15 -->
