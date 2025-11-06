@@ -1,3 +1,4 @@
+{/* Auto-generated comment for collaboration - 2025-11-08 16:39:17 */}
 import type { Metadata } from "next";
 import "./globals.css";
 import "@rainbow-me/rainbowkit/styles.css";
