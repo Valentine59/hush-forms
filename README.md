@@ -6,7 +6,7 @@ Next.js frontend, Hardhat tooling, and Sepolia deployment scripts aligned with t
 
 ## Demo
 
-- **Walkthrough video:** [`media/demo.mp4`](./media/demo.mp4) â€?showcases wallet connection, encrypted submissions,
+- **Walkthrough video:** [`media/demo.mp4`](./media/demo.mp4) ï¿½?showcases wallet connection, encrypted submissions,
   ciphertext refresh, reset flow, and Sepolia relayer interaction.
 
 ## Highlights
@@ -17,8 +17,8 @@ Next.js frontend, Hardhat tooling, and Sepolia deployment scripts aligned with t
      `frontend/hooks/useEncryptedSurvey.tsx`).
   2. Contract ingests ciphertext through `FHE.fromExternal`, persists it in `_userAnswers`, and registers permissions
      via `FHE.allowThis` + `FHE.allow` so the caller and contract can decrypt when needed.
-  3. Decryption leverages Zamaâ€™s relayer SDK; the UI collects a user signature, forwards it to the relayer, and
-     displays clear values.
+  3. Decryption leverages Zamaâ€™s relayer SDK; the UI collects a user signature, forwards it to the relayer, and displays
+     clear values.
 - **Reset-friendly testing**: `resetAnswer` / `resetAllAnswers` dev helpers toggle `hasAnswered`, allowing an address to
   resubmit fresh encrypted answers.
 - **Production wallet UX**: RainbowKit custom button labelled "Connect Wallet", explicit network/account modals,
@@ -64,10 +64,10 @@ flowchart LR
 Located in `frontend/hooks/useEncryptedSurvey.tsx`:
 
 1. `instance.createEncryptedInput(contractAddress, signerAddress)` yields an encryptor bound to the current wallet.
-2. `input.add32(value)` queues the numeric answer (`0â€?^32-1`).
+2. `input.add32(value)` queues the numeric answer (`0ï¿½?^32-1`).
 3. `input.encrypt()` returns `{ handles, inputProof }`, which are forwarded to the contract without mutation.
 4. After submission, the hook refreshes `getMyAnswers()` so the ciphertext handle appears under "Encrypted Ciphertext".
-5. `decryptTallies()` orchestrates the relayer flow: request signature â†?call relayer â†?display decrypted values.
+5. `decryptTallies()` orchestrates the relayer flow: request signature ï¿½?call relayer ï¿½? display decrypted values.
 
 **Resetting your own account (Sepolia example)**
 
@@ -133,7 +133,8 @@ The app auto-detects localhost vs production. Production domains force Sepolia a
 
 ### Live Demo
 
-- **Frontend Application**: [https://hush-forms.vercel.app](https://hush-forms.vercel.app)
+- **Frontend Application**:
+  [https://encrypted-survey-dapp-ztmp.vercel.app](https://encrypted-survey-dapp-ztmp.vercel.app)
 - **Contract on Sepolia**:
   [https://sepolia.etherscan.io/address/0x0a88BCa869a4bF29352F525F1cc71aC6D7AEE9a7](https://sepolia.etherscan.io/address/0x0a88BCa869a4bF29352F525F1cc71aC6D7AEE9a7)
 
@@ -148,8 +149,8 @@ The app auto-detects localhost vs production. Production domains force Sepolia a
 
 ## Tests
 
-- `test/EncryptedSurvey.ts` â€?local mock FHEVM coverage.
-- `test/EncryptedSurveySepolia.ts` â€?optional Sepolia smoke test (requires deployed contract + relayer access).
+- `test/EncryptedSurvey.ts` ï¿½?local mock FHEVM coverage.
+- `test/EncryptedSurveySepolia.ts` ï¿½?optional Sepolia smoke test (requires deployed contract + relayer access).
 
 ## References
 
