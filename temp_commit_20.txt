@@ -1,0 +1,1 @@
+﻿Commit 21: docs(api): describe tally endpoint by Bradley747 at 2025-11-05T12:18:00-08:00

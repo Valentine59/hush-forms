@@ -1,0 +1,1 @@
+﻿Commit 27: perf(ui): throttle live updates by Bradley747 at 2025-11-06T11:48:00-08:00
