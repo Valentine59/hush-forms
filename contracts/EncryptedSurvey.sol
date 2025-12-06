@@ -81,6 +81,7 @@ contract EncryptedSurvey is SepoliaConfig {
 	/// @param inputProof Input proof produced by the FHEVM SDK
 	function submitAnswer(uint8 questionId, externalEuint32 inputEuint32, bytes calldata inputProof) external {
 		require(questionId <= QUESTION_AGE, "Invalid question ID");
+		require(inputProof.length > 0, "Invalid proof");
 		require(!hasAnswered[msg.sender][questionId], "Already answered this question");
 
 		euint32 value = FHE.fromExternal(inputEuint32, inputProof);
