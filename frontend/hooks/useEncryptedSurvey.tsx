@@ -623,7 +623,7 @@ export const useEncryptedSurvey = (parameters: {
         } catch (error: any) {
           console.error(`[EncryptedSurvey] ❌ Submit error:`, error);
           const errorMessage = error?.message || error?.toString() || "Unknown error";
-          setMessage(`❌ Error: ${errorMessage}`);
+          setMessage(`❌ Error: ${errorMessage}. Please check your connection and try again.`);
           
           // Try to refresh anyway in case the transaction went through
           try {
