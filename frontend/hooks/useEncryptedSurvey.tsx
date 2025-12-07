@@ -78,7 +78,7 @@ export const useEncryptedSurvey = (parameters: {
 
       if (chainEntry && chainEntry.address !== ethers.ZeroAddress) {
         // Prevent accidentally using Hardhat (31337) when running in production
-        if (chainId !== 31337 && !isLocalhost) {
+        if (chainId === 31337 && !isLocalhost) {
           if (sepoliaEntry && sepoliaEntry.address !== ethers.ZeroAddress) {
             console.log(`[useEncryptedSurvey] effectiveChainId: Ignoring Hardhat chainId (31337) on non-localhost (${hostname}), switching to Sepolia (11155111).`);
             return sepoliaEntry.chainId;
