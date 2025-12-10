@@ -91,8 +91,8 @@ contract EncryptedSurvey is SepoliaConfig {
 		_userAnswers[msg.sender][questionId] = value;
 		
 		// Allow the contract and the user to decrypt this value
-		FHE.allowThis(_userAnswers[msg.sender][questionId]);
 		FHE.allow(_userAnswers[msg.sender][questionId], msg.sender);
+		FHE.allowThis(_userAnswers[msg.sender][questionId]);
 
 		hasAnswered[msg.sender][questionId] = true;
 	}
