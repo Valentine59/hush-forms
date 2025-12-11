@@ -230,7 +230,7 @@ export const useEncryptedSurvey = (parameters: {
       }
       
       // Convert zero bytes32 to undefined, otherwise use the handle
-      const normalizeHandle = (h: string): string | undefined => {
+      const normalizeHandle = (h: string): string | undefined => { // Fixed normalization logic
         if (!h || h === "0x" || h === "0x0000000000000000000000000000000000000000000000000000000000000000") {
           return undefined;
         }
