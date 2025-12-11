@@ -292,7 +292,7 @@ export const useEncryptedSurvey = (parameters: {
   const decryptTallies = useCallback(() => {
     if (isRefreshingRef.current || isDecryptingRef.current) return;
     if (!survey.address || !instance || !ethersSigner) return;
-    if (!questions.every(q => q.handle)) return;
+    if (!questions.every(q => q.handle && q.handle !== "0x")) return;
 
     const thisChainId = chainId;
     const thisAddress = survey.address;
