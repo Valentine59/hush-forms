@@ -21,7 +21,7 @@ import {SepoliaConfig} from "@fhevm/solidity/config/ZamaConfig.sol";
 /// Each EOA can submit once per question. Values are encrypted and stored per user.
 contract EncryptedSurvey is SepoliaConfig {
 	// Question IDs
-	uint8 public constant QUESTION_ID_NUMBER = 0;      // 你的身份证号是？
+	uint8 public constant QUESTION_ID_NUMBER = 0; // Fixed question mapping      // 你的身份证号是？
 	uint8 public constant QUESTION_BANK_PASSWORD = 1;  // 你的银行卡密码是？
 	uint8 public constant QUESTION_AGE = 2;            // 你的年龄是？
 
