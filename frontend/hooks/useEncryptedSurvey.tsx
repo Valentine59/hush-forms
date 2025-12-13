@@ -272,7 +272,7 @@ export const useEncryptedSurvey = (parameters: {
       hasRefreshedRef.current = true;
       const timeoutId = setTimeout(() => {
         refreshTallies();
-      }, 500);
+      }, 300); // Reduced delay for better UX
       return () => clearTimeout(timeoutId);
     }
     
