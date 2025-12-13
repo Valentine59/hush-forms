@@ -387,7 +387,7 @@ export const useEncryptedSurvey = (parameters: {
     run();
   }, [chainId, ethersSigner, fhevmDecryptionSignatureStorage, instance, questions, sameChain, sameSigner, survey.address]);
 
-  const canSubmit = useMemo(() => { // Optimized with memoization
+  const canSubmit = useMemo(() => { // Optimized with memoization // Optimized with memoization
     return survey.address && instance && ethersSigner && !isRefreshing && !isSubmitting;
   }, [survey.address, instance, ethersSigner, isRefreshing, isSubmitting]);
 
