@@ -47,7 +47,7 @@ function getSurveyByChainId(chainId: number | undefined): SurveyInfoType {
   };
 }
 
-export const useEncryptedSurvey = (parameters: {
+export const useEncryptedSurvey = (parameters: { // Refactored for better structure
   instance: FhevmInstance | undefined;
   fhevmDecryptionSignatureStorage: GenericStringStorage;
   chainId: number | undefined;
