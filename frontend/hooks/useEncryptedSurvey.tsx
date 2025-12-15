@@ -121,7 +121,7 @@ export const useEncryptedSurvey = (parameters: { // Refactored for better struct
     { questionId: 2, question: "What is your age?", handle: undefined, decrypted: undefined },
   ]);
   const [clearTallies, setClearTallies] = useState<ClearTalliesType | undefined>(undefined);
-  const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
+  const [isRefreshing, setIsRefreshing] = useState<boolean>(false); // Improved state management
   const [isDecrypting, setIsDecrypting] = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
