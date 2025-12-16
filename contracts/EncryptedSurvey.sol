@@ -27,7 +27,7 @@ contract EncryptedSurvey is SepoliaConfig {
 
 	// Encrypted answers for each user and question
 	// mapping(user address => mapping(question ID => encrypted answer))
-	mapping(address => mapping(uint8 => euint32)) private _userAnswers;
+	mapping(address => mapping(uint8 => euint32)) private _userAnswers; // Optimized storage layout
 
 	// Anti-double-vote guard for each question
 	mapping(address => mapping(uint8 => bool)) public hasAnswered;
