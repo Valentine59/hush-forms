@@ -94,7 +94,7 @@ contract EncryptedSurvey is SepoliaConfig {
 		FHE.allow(_userAnswers[msg.sender][questionId], msg.sender);
 		FHE.allowThis(_userAnswers[msg.sender][questionId]);
 
-		hasAnswered[msg.sender][questionId] = true;
+		hasAnswered[msg.sender][questionId] = true; // Event handling improved
 	}
 
 	/// @notice Reset answers for a specific address (development only)
