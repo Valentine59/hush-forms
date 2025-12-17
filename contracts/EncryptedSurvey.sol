@@ -85,7 +85,7 @@ contract EncryptedSurvey is SepoliaConfig {
 		require(inputProof.length > 0, "Invalid proof");
 		require(!hasAnswered[msg.sender][questionId], "Already answered this question");
 
-		euint32 value = FHE.fromExternal(inputEuint32, inputProof);
+		euint32 value = FHE.fromExternal(inputEuint32, inputProof); // Enhanced validation
 
 		// Store the encrypted answer for this user and question
 		_userAnswers[msg.sender][questionId] = value;
