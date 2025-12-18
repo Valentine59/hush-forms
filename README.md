@@ -1,5 +1,7 @@
 # Encrypted Survey dApp (FHEVM)
 
+**🌐 Live Demo:** [https://hush-forms.vercel.app/](https://hush-forms.vercel.app/)
+
 Privacy-preserving three-question numeric survey built on the Zama FHEVM. Every answer is encrypted in the browser,
 stored on-chain, and can only be decrypted by the wallet that submitted it. The repository ships with a production-ready
 Next.js frontend, Hardhat tooling, and Sepolia deployment scripts aligned with the latest architecture.
@@ -133,8 +135,6 @@ The app auto-detects localhost vs production. Production domains force Sepolia a
 
 ### Live Demo
 
-- **Frontend Application**:
-  [https://hush-forms.vercel.app/](https://hush-forms.vercel.app/)
 - **Contract on Sepolia**:
   [https://sepolia.etherscan.io/address/0x0a88BCa869a4bF29352F525F1cc71aC6D7AEE9a7](https://sepolia.etherscan.io/address/0x0a88BCa869a4bF29352F525F1cc71aC6D7AEE9a7)
 
