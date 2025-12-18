@@ -134,7 +134,7 @@ The app auto-detects localhost vs production. Production domains force Sepolia a
 ### Live Demo
 
 - **Frontend Application**:
-  [https://encrypted-survey-dapp-ztmp.vercel.app](https://encrypted-survey-dapp-ztmp.vercel.app)
+  [https://hush-forms.vercel.app/](https://hush-forms.vercel.app/)
 - **Contract on Sepolia**:
   [https://sepolia.etherscan.io/address/0x0a88BCa869a4bF29352F525F1cc71aC6D7AEE9a7](https://sepolia.etherscan.io/address/0x0a88BCa869a4bF29352F525F1cc71aC6D7AEE9a7)
 
